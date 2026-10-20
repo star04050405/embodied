@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>具身认知 · 从头到尾讲了什么</title>
+<meta name="theme-color" content="#474845">
+<meta name="description" content="《具身认知：知觉心理学重塑你的世界》全书导读 · 环绕我们的，也造就我们">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:#474845;color:#E9E9E4;
+  font-family:'Noto Serif SC','Songti SC',Georgia,serif;
+  min-height:100vh;overflow-x:hidden;
+}
+.wrap{max-width:660px;margin:0 auto;padding:0 22px 80px}
+.fadein{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.fadein.in{opacity:1;transform:none}
+/* ---------- 封面 hero ---------- */
+.hero{padding:64px 0 30px;text-align:center;position:relative}
+.hero .big-en{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(34px,8.6vw,54px);letter-spacing:.04em;color:#C9D8CC;font-weight:600;line-height:1.05;
+}
+.hero .de{font-size:11.5px;color:#9FA79C;letter-spacing:.14em;margin-top:10px;line-height:1.7}
+.mint{color:#C9D8CC}
+.hero .quotes{margin:34px auto 0;max-width:430px;text-align:left}
+.hero .quotes p{font-size:13.5px;line-height:2;color:#B9C4B8;margin-bottom:14px}
+.beam{position:relative;height:230px;margin:8px 0 0}
+.beam .cone{
+  position:absolute;left:50%;top:-6px;transform:translateX(-58%);
+  width:150px;height:238px;
+  background:linear-gradient(to bottom, rgba(233,233,228,.30), rgba(233,233,228,.05) 78%);
+  clip-path:polygon(42% 0, 58% 0, 100% 100%, 0 100%);
+}
+.beam .man{position:absolute;right:14%;top:12px;width:74px;height:auto;opacity:.92}
+.beam .floor{position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(233,233,228,.14)}
+.h-title{
+  font-size:clamp(56px,15.5vw,92px);font-weight:900;letter-spacing:.06em;color:#C9D8CC;line-height:1.12;
+  margin-top:2px;
+}
+.h-sub{font-size:clamp(17px,4.6vw,25px);font-weight:600;color:#DFE3DC;letter-spacing:.22em;margin-top:12px}
+.h-authors{margin-top:30px;font-size:12.5px;color:#A8AFA5;line-height:2}
+.h-authors b{color:#D7DDD3;font-weight:600}
+.h-pub{margin-top:16px;display:flex;justify-content:center;gap:10px;align-items:center;color:#8B938A;font-size:11px;letter-spacing:.2em}
+.h-pub i{display:inline-block;width:26px;height:1px;background:#6E746C}
+/* ---------- 一句话 ---------- */
+.onesen{margin:64px 0 8px;text-align:center}
+.onesen .l{font-size:11px;letter-spacing:.4em;color:#8B938A}
+.onesen .s{font-size:clamp(20px,5.6vw,28px);line-height:1.9;color:#E9E9E4;margin-top:18px}
+.onesen .s b{color:#C9D8CC;font-weight:900}
+/* ---------- 时间线 ---------- */
+.tl-h{margin:70px 0 26px;text-align:center}
+.tl-h .t{font-size:11px;letter-spacing:.4em;color:#8B938A}
+.tl-h .e2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#C9D8CC;margin-top:8px}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:'';position:absolute;left:9px;top:6px;bottom:6px;width:1px;background:linear-gradient(#C9D8CC 0%, rgba(201,216,204,.25) 100%)}
+.stop{position:relative;padding-bottom:34px}
+.stop::before{
+  content:'';position:absolute;left:-31px;top:7px;width:11px;height:11px;border-radius:50%;
+  background:#474845;border:2px solid #C9D8CC;box-shadow:0 0 10px rgba(201,216,204,.5);
+}
+.stop.hit::before{background:#C9D8CC}
+.stop .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#9FA79C;letter-spacing:.06em}
+.stop h3{font-size:19.5px;font-weight:900;color:#E9E9E4;margin-top:4px;line-height:1.5}
+.stop .lead{font-size:14px;line-height:2;color:#C2C6BE;margin-top:10px}
+.stop .lead b{color:#C9D8CC;font-weight:600}
+.pills{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-size:11px;color:#B9C4B8;border:1px solid rgba(201,216,204,.35);border-radius:999px;padding:4px 11px;letter-spacing:.05em}
+/* ---------- 金句 ---------- */
+.quotes-sec{margin:74px 0 8px;text-align:center}
+.quotes-sec .t{font-size:11px;letter-spacing:.4em;color:#8B938A}
+.qbox{margin-top:26px;text-align:left}
+.q{padding:22px 4px;border-top:1px solid rgba(233,233,228,.14)}
+.q .zh{font-size:15.5px;line-height:1.95;color:#DFE3DC}
+.q .zh b{color:#C9D8CC;font-weight:600}
+.q .src{display:block;margin-top:8px;font-size:11px;color:#8B938A;letter-spacing:.15em}
+/* ---------- 出版 ---------- */
+.pub{margin-top:66px;text-align:center;color:#9FA79C;font-size:12px;line-height:2.2;letter-spacing:.08em}
+.pub .en{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C9D8CC;font-size:14px}
+.foot{margin-top:34px;text-align:center;color:#767C74;font-size:11px;letter-spacing:.25em}
+#toast{
+  position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);
+  background:#C9D8CC;color:#2E332D;font-size:13px;padding:10px 20px;border-radius:999px;
+  opacity:0;pointer-events:none;transition:.3s;z-index:99;white-space:nowrap;font-weight:600;
+}
+#toast.show{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero fadein">
+    <div class="big-en">SELF INFLUENCING</div>
+    <div class="de">TRAINIEREN SIE IHRE WAHRNEHMUNG UND ENTSCHEIDEN SIE ÜBER IHRE ZUKUNFT</div>
+    <div class="quotes">
+      <p>我们是什么，由我们的知觉所塑造<br>环绕我们的，塑造了我们的认知</p>
+      <p>当我们能有意识地主导<b class="mint">视觉、听觉、触觉、味觉、嗅觉</b>，或者我们的<b class="mint">身体感知、内容感知、环境感知</b>时，我们会得到我们想要的改变</p>
+    </div>
+    <div class="beam">
+      <div class="cone"></div>
+      <svg class="man" viewBox="0 0 74 60" fill="none">
+        <ellipse cx="40" cy="9" rx="6.5" ry="6.5" fill="#E9E9E4"/>
+        <path d="M38 15 C33 22, 27 26, 20 29 L14 27 M38 15 C44 19, 52 20, 60 18 L66 13 M36 22 C34 30, 33 36, 34 44 L26 52 M36 22 C40 30, 44 34, 50 40 L48 52"
+          stroke="#E9E9E4" stroke-width="4.6" stroke-linecap="round"/>
+      </svg>
+      <div class="floor"></div>
+    </div>
+    <h1 class="h-title">具身认知</h1>
+    <div class="h-sub">知觉心理学重塑你的世界</div>
+    <div class="h-authors">
+      [德] <b>露特·E. 施瓦茨</b>（Ruth E. Schwarz）　[德] <b>弗里德黑尔姆·施瓦茨</b>（Friedhelm Schwarz） 著<br>
+      李雪　余萍　译
+    </div>
+    <div class="h-pub"><i></i>人民邮电出版社<i></i></div>
+  </header>
+
+  <section class="onesen fadein">
+    <div class="l">一句话讲完</div>
+    <div class="s">你以为你在独立思考——其实是<b>知觉先替你做了决定</b>。<br>这本书教你把知觉从「自动驾驶」调成「手动挡」：<b>环绕我们的，也造就我们</b>；而学会了观察环绕，你就能反过来造就自己。</div>
+  </section>
+
+  <div class="tl-h fadein">
+    <div class="t">从头到尾</div>
+    <div class="e2">The whole book, stop by stop</div>
+  </div>
+  <div class="tl" id="tl"></div>
+
+  <section class="quotes-sec fadein">
+    <div class="t">书里反复在说</div>
+    <div class="qbox" id="qbox"></div>
+  </section>
+
+  <div class="pub fadein">
+    <div class="en">SELF INFLUENCING · Embodied Cognition</div>
+    《具身认知：知觉心理学重塑你的世界》<br>
+    [德] 露特·E. 施瓦茨 / 弗里德黑尔姆·施瓦茨 著 · 李雪 余萍 译<br>
+    人民邮电出版社 · 2023
+  </div>
+  <footer class="foot fadein">知觉先于思想 · 先看见，再选择</footer>
+
+</div>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const STOPS = [
+{tag:'Foreword', no:'前言', t:'环绕我们的，也造就我们', hit:true,
+ lead:'全书的出发点：思想不是凭空来的。<b>知觉走在了思想前面</b>——环境、身体与文化先塑造了你的认知，然后才轮到「你」发言。想要改变，就得回到源头去。',
+ subs:[]},
+{tag:'Introduction', no:'引言', t:'你的三个愿望',
+ lead:'作者把读者的期待收拢成三件事：<b>想改变自己</b>；<b>想识破外部影响并削弱它们</b>；<b>想自己应对变化、亲手塑造未来</b>。整本书，就是把这三个愿望从口号变成可训练的技能。',
+ subs:['你想改变自己','辨识并削弱外部影响','自己塑造自己的未来']},
+{tag:'Chapter 01', no:'第 1 章', t:'知觉是了解、构建和改变自我的关键',
+ lead:'身体知觉是情绪、思维、行为和决定的<b>地基</b>。生命头四年，知觉替你写好了认知世界的默认设置；而神经可塑性带来好消息——<b>地基已定，装修永远来得及</b>。',
+ subs:['具身认知：知觉是前提','生命的头四年','知觉决定全部需求','神经可塑性支持改变']},
+{tag:'Chapter 02', no:'第 2 章', t:'感官知觉不是实况转播',
+ lead:'知觉并不是对现实的真实录像，它是想法的<b>「修正液」</b>、行为的<b>「助推器」</b>。感知分三个层级：环境感知（外部现实）、身体感知（内心现实）、内容感知（社会现实）——它们互相协作，而情感感受，也是知觉的一部分。',
+ subs:['感知等级因文化而异','环境感知','身体感知','内容感知','感官互相协作','情感感受也是知觉']},
+{tag:'Chapter 03', no:'第 3 章', t:'当知觉带我们走岔路',
+ lead:'错觉、偏见、被设计好的感知现场——这一章专门收集<b>知觉骗我们的方式</b>。看清这些陷阱，是夺回主动权的第一步。',
+ subs:[]},
+{tag:'Chapter 04', no:'第 4 章', t:'知觉在现实世界织了一张大网',
+ lead:'你活在自己构造的「内在现实」里，而这张网由无数看不见的丝织成：<b>颜色</b>在潜意识里施压，<b>气味</b>直接绕过理性，<b>象征</b>组织着社会，<b>权威</b>制造偏见，<b>模因</b>（会传染的想法）批量复制，<b>词语</b>悄悄改写记忆——影响最大的，还有你的过往。',
+ subs:['内在现实是主观构造','什么在悄悄影响我们','过往的影响','象征行为','颜色的威力','气味直达潜意识','情境与可塑性','权威与偏见','模因','词语的影响力']},
+{tag:'Chapter 05', no:'第 5 章', t:'通过自我影响塑造人生',
+ lead:'正面武器登场：<b>安慰剂效应</b>、<b>肯定语</b>、<b>灵感</b>、<b>美学</b>、<b>知觉训练</b>。作者给出五种可改变生活的行为模式，并把「自我」重新定义为动态结构——从混沌到觉醒，把行为从无意识提到有意识，从此跳出影响陷阱。',
+ subs:['安慰剂效应','肯定语','灵感','美学','知觉训练','五种行为模式','自我是动态结构','跳出影响陷阱','从混沌到觉醒']},
+{tag:'Chapter 06', no:'第 6 章', t:'训练感官知觉',
+ lead:'终章是练习册：环境感知训练、身体感知训练、内容感知训练，三套功课的目标只有一个——<b>从事后聪明，走向未雨绸缪</b>。让感知先于反应，你就改写了剧本。',
+ subs:['环境感知训练','身体感知训练','内容感知训练','从事后聪明到未雨绸缪']}
+];
+
+const QUOTES = [
+{zh:'<b>环绕我们的，也造就我们。</b>我们与外部世界紧密一体、不可分割。', src:'前言标题 · 全书题眼'},
+{zh:'我们是什么，由<b>我们的知觉</b>所塑造；环绕我们的，塑造了我们的认知。', src:'封面引言'},
+{zh:'当我们能有意识地主导<b>视觉、听觉、触觉、味觉、嗅觉</b>，或我们的身体感知、内容感知、环境感知时，我们会得到我们想要的改变。', src:'封面引言 · 方法的全部线索'}
+];
+
+// ---------- render ----------
+const tl = document.getElementById('tl');
+tl.innerHTML = STOPS.map((s,i) => `
+  <div class="stop fadein ${s.hit?'hit':''}">
+    <div class="tag">${s.tag} · ${i===0?'Stop 0':''}${i}</div>
+    <h3><span class="mint" style="font-size:15px;margin-right:10px">${s.no}</span>${s.t}</h3>
+    <div class="lead">${s.lead}</div>
+    ${s.subs.length?`<div class="pills">${s.subs.map(x=>'<span class="pill">'+x+'</span>').join('')}</div>`:''}
+  </div>`).join('');
+
+document.getElementById('qbox').innerHTML = QUOTES.map(q => `
+  <div class="q"><div class="zh">${q.zh}</div><span class="src">— ${q.src}</span></div>`).join('');
+
+// 点击章节 → 微反馈（读到了哪一站）
+document.querySelectorAll('.stop h3').forEach((h,i) => h.addEventListener('click', () => {
+  toast('✦ 第 ' + i + ' 站 · ' + STOPS[i].t);
+}));
+
+// 入场
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.07});
+document.querySelectorAll('.fadein').forEach(el => io.observe(el));
+
+// 光束小人轻微漂浮
+const man = document.querySelector('.man');
+if (man) {
+  let t0 = null;
+  const float = ts => {
+    if (!t0) t0 = ts;
+    const y = Math.sin((ts-t0)/900) * 5;
+    man.style.transform = 'translateY(' + y.toFixed(1) + 'px)';
+    requestAnimationFrame(float);
+  };
+  requestAnimationFrame(float);
+}
+
+</script>
+</body>
+</html>
